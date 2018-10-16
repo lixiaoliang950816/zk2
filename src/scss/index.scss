@@ -1,0 +1,50 @@
+@import "./common.scss";
+@import "./mixin.scss";
+.wrap {
+    width: 100%;
+    height: 100%;
+    @include box_flex;
+    @include direction(column);
+    overflow: hidden;
+}
+
+header {
+    width: 100%;
+    height: pxTorem(44px);
+    background: #999;
+    @include box_flex;
+    @include align;
+    @include justify(space-between);
+    @include sizing;
+    padding-right: pxTorem(10px);
+}
+
+.cont {
+    @include flex;
+    overflow-y: scroll;
+    .list {
+        width: 100%;
+        height: pxTorem(80px);
+    }
+    .list1 {
+        width: 100%;
+        height: 100%;
+        li {
+            width: 100%;
+            height: pxTorem(70px);
+            border-bottom: pxTorem(1px) solid #ccc;
+            h4 {
+                height: pxTorem(20px);
+            }
+            p {
+                height: pxTorem(50px);
+            }
+        }
+    }
+}
+
+footer {
+    width: 100%;
+    height: pxTorem(44px);
+    background: #999;
+}
